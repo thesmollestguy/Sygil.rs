@@ -40,23 +40,48 @@ Functions are ways to reuse and call code in a program without typing it multipl
 
 ## Declaration
 
-Simple functions are declared using the function declaration symbol (`::`) followed by a function identifier (any string of 3 or more alphanumeric characters plus hyphens), the function parameter brackets (`<>`, left empty for now), and the opening function code bracket (`(`). This is followed by the code held within the function and terminated with a closing function code bracket (`)`).
+Simple functions are declared using the function declaration symbol (`::`) followed by a function identifier (any string of 3 or more alphanumeric characters plus hyphens), the function parameter brackets (`<>`, left empty for now), and the function code bracket (`|`). This is followed by the code held within the function and terminated with a function code bracket (`|`).
 
-EX. ```
-
-::func<> (
-
+EX. ```::func<> |
     :var;0
+|```
 
-)
-```
+A more complex function starts with the same declaration (`::name<`) but alongside this has input parameters. These input parameters are formatted the same way normal variables are declared but without the value.
 
-A more complex function starts with the same declaration 
+EX. ```::func<:param> |
+    :var;$param
+|```
 
 ## Calling
 
-To
+To call a function, you use the function call symbol (`_`) followed by the function identifier, opening function paramater bracket (`<`), any required parameters, and the closing function paramater bracket (`>`). 
+
+EX. `_func<10>`
+
+## Built-in Functions
+
+There are 2 built-in functions in Sygil. 
+
+`print`: This function prints each of the parameter inputs in succession followed by a newline character.
+
+`return`: This function, when used inside of a function declaration, defines a function return value. This function can only be given a maximum of 1 parameter. 
 
 # Classes
 
 Classes are namespaces that are declarable and callable on-demand, making for better compartmentalization of programs.
+
+## Declaration
+
+To declare a class you need the class declaration symbol (`:@`) and a class identifier name. 
+
+### Declaring sub-classes, sub-variables, and sub-functions
+
+After declaring a class you can declare classes, variables, and functions below it using their standard declaration rules alongside the class's identifier. 
+
+EX. 
+
+`@class:var;2`
+
+`@class:@classer`
+
+`@class::func<>( _return<> )`
