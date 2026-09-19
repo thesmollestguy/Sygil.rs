@@ -43,9 +43,13 @@ Functions are ways to reuse and call code in a program without typing it multipl
 Simple functions are declared using the function declaration symbol (`::`) followed by a function identifier (any string of 3 or more alphanumeric characters plus hyphens), the function parameter brackets (`<>`, left empty for now), and the opening function code bracket (`(`). This is followed by the code held within the function and terminated with a closing function code bracket (`)`).
 
 EX. ```
+
 ::func<> (
+
     :var;0
-)```
+
+)
+```
 
 A more complex function starts with the same declaration 
 
