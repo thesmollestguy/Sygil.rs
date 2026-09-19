@@ -8,14 +8,6 @@ Category one is the integer-type values, being the `short`, `int`, and `long` ty
 
 Category two is the float-type, which only includes the `float` type. This is created when typing a decimal-represented number.
 
-## Booleans
-
-A boolean is represented by the ? symbol followed by 0 for false and 1 for true
-
-`?0` = False
-
-`?1` = True
-
 ## Strings
 
 Strings are values creates by placing any UTF-8 characters within the bounds of two `"` characters.
@@ -74,7 +66,9 @@ Classes are namespaces that are declarable and callable on-demand, making for be
 
 To declare a class you need the class declaration symbol (`:@`) and a class identifier name. 
 
-### Declaring sub-classes, sub-variables, and sub-functions
+## Sub-classes, sub-variables, and sub-functions
+
+### Declaration
 
 After declaring a class you can declare classes, variables, and functions below it using their standard declaration rules alongside the class's identifier. 
 
@@ -85,3 +79,35 @@ EX.
 `@class:@classer`
 
 `@class::func<>( _return<> )`
+
+### Usage
+
+To use a class's sub-objects you combine the objects standard usage rules alongside the class's identifier
+
+EX.
+
+`@class$var`
+
+`@class@classer`
+
+`@class_func<>`
+
+# Expressions
+
+Expressions are the premier way to perform operations with both numbers and strings.
+
+## Forming an expression
+
+Expressions are formed through the expression brackets (`[]`), a value, an operator, and a second value. A value can be a variable, function call that returns, direct value, or another expression. 
+
+EX. `[2+4]`, `[1+[2*3]]`, `[$var-3]`, `[$var/_func<>]`, `[@class$var+5]`
+
+## Operators
+
+On numeric types, the operators `+`, `-`, `*`, and `/` are all permitted. `+` represents addition, `-` represents subtraction, `*` represents multiplication, and `/` represents division.
+
+On strings, only the `+` operator is permitted. This operator concatenates one string to another.
+
+# BOOLEANS, CONDITIONALS, AND THE IF FUNCTION
+
+Coming soon...
